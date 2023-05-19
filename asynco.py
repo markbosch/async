@@ -17,7 +17,7 @@ class Scheduler:
 
     def call_later(self, delay, func):
         self.sequence += 1
-        deadline = time.time() + delay     # Experiation time
+        deadline = time.time() + delay     # Expiration time
         # Priority queue
         heapq.heappush(self.sleeping, (deadline, self.sequence, func))
 
